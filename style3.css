@@ -1,7 +1,7 @@
-/* Estilização geral da página */
+
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #00c6ff, #0072ff); /* Gradiente de fundo */
+    background: linear-gradient(to right, #00c6ff, #0072ff); 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,12 +9,12 @@ body {
     margin: 0;
 }
 
-/* Container centralizado */
+
 .container {
-    background-color: #ffffff; /* Fundo branco para o container */
+    background-color: #ffffff; 
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
     text-align: center;
     max-width: 500px;
     width: 100%;
@@ -23,45 +23,43 @@ body {
     align-items: center;
 }
 
-/* Estilização do título */
+
 h1 {
     margin-bottom: 20px;
     color: #333;
-    font-size: 28px; /* Tamanho maior para destaque */
+    font-size: 28px;
 }
 
-/* Estilização do parágrafo */
+
 p {
     margin-bottom: 15px;
     color: #555;
     font-size: 18px;
 }
 
-/* Grupo de entrada e botão */
+
 .input-group {
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente o grupo */
-    align-items: center; /* Alinha verticalmente */
-    gap: 10px; /* Espaçamento entre a caixa de entrada e o botão */
-}
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
 
-/* Estilização do campo de entrada */
+
 input {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 300px; /* Largura fixa para a caixa de entrada */
+    width: 300px; 
     transition: border-color 0.3s;
 }
 
-/* Estilização do campo de entrada ao focar */
 input:focus {
     border-color: #0072ff;
     outline: none;
 }
 
-/* Estilização do botão */
+
 button {
     padding: 10px 20px;
     font-size: 16px;
@@ -75,12 +73,12 @@ button {
     max-width: 120px;
 }
 
-/* Efeito de hover no botão */
+
 button:hover {
     background-color: #005bb5;
 }
 
-/* Estilização do resultado */
+
 #temperatura {
     margin-top: 20px;
     font-size: 18px;
