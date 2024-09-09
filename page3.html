@@ -41,12 +41,12 @@
             background: linear-gradient(to right, #1e183c, #5d4a98);
             background-size: cover;
         }
-        /* Adiciona um pouco de estilo para o formulário */
+        
         form {
-            background: rgba(255, 255, 255, 0.8); /* Fundo branco semitransparente */
+            background: rgba(255, 255, 255, 0.8); 
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
             max-width: 500px;
             margin: 0 auto;
         }
@@ -63,7 +63,7 @@
             margin: 5px 0;
         }
         input {
-            width: calc(100% - 22px); /* Ajusta a largura dos inputs */
+            width: calc(100% - 22px); 
             padding: 8px;
             border-radius: 4px;
             border: 1px solid #ccc;
@@ -80,21 +80,19 @@
 
     
     <script>
-        // Função para preencher o formulário
+      
         const preencherFormulario = (endereco) => {
             document.getElementById("rua").value = endereco.logradouro || '';
-            document.getElementById("numero").value = ''; // O número não é fornecido pela API ViaCEP
+            document.getElementById("numero").value = ''; 
             document.getElementById("bairro").value = endereco.bairro || '';
             document.getElementById("cidade").value = endereco.localidade || '';
             document.getElementById("estado").value = endereco.uf || '';
         }
 
-        // Função para validar o CEP
         const cepValido = (cep) => {
             return cep.length === 8;
         }
 
-        // Função assíncrona para buscar o CEP
         const pesquisarCep = async () => {
             const cep = document.getElementById("cep").value;
             const url = `https://viacep.com.br/ws/${cep}/json/`;
@@ -105,7 +103,6 @@
                     const endereco = await dados.json();
                     
                     if (endereco.erro) {
-                        // Se o CEP não for encontrado, exibe uma mensagem de erro
                         alert("CEP não encontrado");
                         return;
                     }
@@ -118,8 +115,7 @@
                 alert("CEP inválido. Deve ter 8 dígitos.");
             }
         }
-
-        // Adiciona um evento ao campo de CEP para buscar dados ao perder o foco
+        
         document.getElementById("cep").addEventListener("focusout", pesquisarCep);
     </script>
 </body>
